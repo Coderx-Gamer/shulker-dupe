@@ -6,8 +6,8 @@ A client-side fabric mod that makes it easier to perform the shulker dupe.
 
 ---
 
-The 'dupe all' option will not always dupe all the items in the shulker box.
+Every dupe action ('Dupe All' and 'Dupe') depends on your ping and may not always work correctly.
 
-The 'dupe' option will always dupe the item in the first shulker box slot. (slot id 0)
+The 'Dupe' button will always dupe the item in the first shulker box slot. (slot id 0)
 
-All of the options can be found in the shulker box screen.
+All actions are found in the shulker box screen.
