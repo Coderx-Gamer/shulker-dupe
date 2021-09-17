@@ -12,4 +12,4 @@ The 'Dupe' button will always dupe the item in the first shulker box slot. (slot
 
 All actions are found in the shulker box screen.
 
-This is NOT an offical mojang project.
+This is NOT an official mojang project.
