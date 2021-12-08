@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.shulker.dupe.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "ShulkerBoxScreenMixin",
+    "ClientPlayerEntityMixin",
+    "ClientConnectionMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
