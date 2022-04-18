@@ -16,6 +16,7 @@ jobs:
     - uses: actions/setup-java@v3.1.1
       with:
        java-version: 16
+       distribution: 'temurin'
     - uses: actions/checkout@v3
     - run: |
        gradlew.bat build
