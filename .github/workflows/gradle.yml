@@ -11,10 +11,11 @@ permissions:
 
 jobs:
   build:
-
     runs-on: windows-latest
-
     steps:
+    - uses: actions/setup-java@v3.1.1
+      with:
+       java-version: 16
     - uses: actions/checkout@v3
     - run: |
        gradlew.bat build
