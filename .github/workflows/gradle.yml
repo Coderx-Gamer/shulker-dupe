@@ -23,4 +23,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: gradlew build
+    - run: gradlew.bat build
