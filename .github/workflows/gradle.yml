@@ -19,6 +19,7 @@ jobs:
        distribution: 'zulu'
     - uses: actions/checkout@v3
     - run: |
+       pwd
        gradlew.bat build
        pwd
       shell: cmd
