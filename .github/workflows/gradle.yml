@@ -19,7 +19,10 @@ jobs:
        distribution: 'zulu'
     - uses: actions/checkout@v3
     - run: |
-       pwd
        gradlew.bat build
        pwd
       shell: cmd
+    - uses: svenstaro/upload-release-action@v2
+      with:
+       repo_token: ${{ secrets.GITHUB_TOKEN }}
+       file: build/libs
