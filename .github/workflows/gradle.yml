@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build:
+    permissions: write-all
     runs-on: windows-latest
     steps:
     - uses: actions/setup-java@v3.1.1
