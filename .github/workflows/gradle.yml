@@ -14,16 +14,29 @@ jobs:
     permissions: write-all
     runs-on: windows-latest
     steps:
-    - uses: actions/setup-java@v3.1.1
-      with:
-       java-version: 17
-       distribution: 'zulu'
-    - uses: actions/checkout@v3
-    - run: |
-       gradlew.bat build
-      shell: cmd
-    - uses: svenstaro/upload-release-action@v2
-      with:
-       repo_token: ${{ secrets.GITHUB_TOKEN }}
-       file: build/libs/
-       tag: ${{ github.ref }}
+      jobs:
+        Setup:
+          uses: actions/setup-java@v3.1.1
+          with:
+            java-version: 17
+            distribution: 'zulu'
+        Cleaning:
+          uses: dev-drprasad/delete-tag-and-release@v0.2.0
+          with:
+            delete_release: true
+            tag_name: Auto
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        Build:
+          needs: [Setup, Cleaning]
+          uses: actions/checkout@v3
+          shell: bash
+          run: |
+            gradlew.bat build
+        Upload:
+          needs: [Build]
+          uses: ncipollo/release-action@v1
+          with:
+            tag: "Auto"
+            token: ${{ secrets.GITHUB_TOKEN }}
+            artifacts: "build/libs/*.jar"
