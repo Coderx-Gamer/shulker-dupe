@@ -25,5 +25,5 @@ jobs:
     - uses: svenstaro/upload-release-action@v2
       with:
        repo_token: ${{ secrets.GITHUB_TOKEN }}
-       file: ./build/libs/*
+       file: build/libs/
        tag: ${{ github.ref }}
