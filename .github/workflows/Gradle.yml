@@ -1,4 +1,4 @@
-name: CI
+name: Gradle Build
 on:
   push:
     branches: [ main ]
@@ -28,7 +28,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Build
-      shell: bash
+      shell: cmd
       run: gradlew.bat build
     - name: Upload Assets
       uses: ncipollo/release-action@v1
