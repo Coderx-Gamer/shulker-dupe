@@ -9,29 +9,29 @@ jobs:
   Clean:
     runs-on: windows-latest
     steps:
-      - name: Delete Release
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
-        with:
-          delete_release: true
-          tag_name: "Auto"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Delete Release
+    - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      with:
+        delete_release: true
+        tag_name: "Auto"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   Build:
     runs-on: windows-latest
     needs: [Clean]
     steps:
-      - name: Setup Java
-      - uses: actions/setup-java@v3.1.1
-        with:
-          java-version: 17
-          distribution: 'zulu'
-      - name: Build
-      - uses: actions/checkout@v3
-      - shell: bash
-      - run: gradlew.bat build
-      - name: Upload Assets
-      - uses: ncipollo/release-action@v1
-        with:
-          tag: "Auto"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "build/libs/*.jar"
+    - name: Setup Java
+    - uses: actions/setup-java@v3.1.1
+      with:
+        java-version: 17
+        distribution: 'zulu'
+    - name: Build
+    - uses: actions/checkout@v3
+    - shell: bash
+    - run: gradlew.bat build
+    - name: Upload Assets
+    - uses: ncipollo/release-action@v1
+      with:
+        tag: "Auto"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: "build/libs/*.jar"
