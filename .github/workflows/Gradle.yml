@@ -13,7 +13,7 @@ jobs:
       uses: dev-drprasad/delete-tag-and-release@v0.2.0
       with:
         delete_release: true
-        tag_name: "Auto"
+        tag_name: "Automatic Release"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   Build:
@@ -33,6 +33,6 @@ jobs:
     - name: Upload Assets
       uses: ncipollo/release-action@v1
       with:
-        tag: "Auto"
+        tag: "Automatic Release"
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: "build/libs/*.jar"
