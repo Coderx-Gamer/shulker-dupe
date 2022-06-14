@@ -9,12 +9,10 @@
     "Coderx_Gamer"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Coderx-Gamer/shulker-dupe",
+    "sources": "https://github.com/Coderx-Gamer/shulker-dupe",
+    "issues": "https://github.com/Coderx-Gamer/shulker-dupe"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/shulker-dupe/icon.png",
 
   "environment": "client",
   "entrypoints": {
