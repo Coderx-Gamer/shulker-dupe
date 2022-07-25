@@ -3,7 +3,6 @@ package net.shulker.dupe.mixin;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.ShulkerBoxScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 import net.shulker.dupe.MainClient;
@@ -26,11 +25,11 @@ public class ShulkerBoxScreenMixin extends Screen {
             setFra(false);
             MainClient.thex = this.width;
             MainClient.they = this.height;
-            this.addDrawableChild(new ButtonWidget(this.width/2-90, this.height/2+35-145, 50, 20, Text.of("Dupe"), (button) -> {
+            this.addDrawableChild(new ButtonWidget(this.width/2-90, this.height/2+35-145, 50, 20, Text.translatable("Dupe"), (button) -> {
                 if (shouldDupeAll) shouldDupeAll = false;
                 shouldDupe = true;
             }));
-            this.addDrawableChild(new ButtonWidget(this.width/2+40, this.height/2+35-145, 50, 20, Text.of("Dupe All"), (button) -> {
+            this.addDrawableChild(new ButtonWidget(this.width/2+40, this.height/2+35-145, 50, 20, Text.translatable("Dupe All"), (button) -> {
                 if (shouldDupe) shouldDupe = false;
                 shouldDupeAll = true;
             }));

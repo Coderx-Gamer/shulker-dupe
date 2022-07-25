@@ -1,15 +1,8 @@
 package net.shulker.dupe;
 
-import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.ShulkerBoxBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.packet.c2s.play.ClickSlotC2SPacket;
 import net.minecraft.screen.ShulkerBoxScreenHandler;
-import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Direction;
@@ -37,8 +30,7 @@ public class MainClient implements ClientModInitializer {
 
         if (shouldDupe || shouldDupeAll) {
             HitResult hit = CLIENT.crosshairTarget;
-            if (hit instanceof BlockHitResult) {
-                BlockHitResult blockHit = (BlockHitResult) hit;
+            if (hit instanceof BlockHitResult blockHit) {
                 if (CLIENT.world.getBlockState(blockHit.getBlockPos()).getBlock() instanceof ShulkerBoxBlock && b1) {
                     CLIENT.interactionManager.updateBlockBreakingProgress(blockHit.getBlockPos(), Direction.DOWN);
                 } else {
@@ -49,9 +41,7 @@ public class MainClient implements ClientModInitializer {
                 }
             }
         }
-        if (b1) {
-
-        } else {
+        if (!b1)  {
             setFra(true);
         }
     }
