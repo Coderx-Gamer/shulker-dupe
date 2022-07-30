@@ -1,20 +1,14 @@
 package net.shulker.dupe;
 
-import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.ShulkerBoxBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.packet.c2s.play.ClickSlotC2SPacket;
 import net.minecraft.screen.ShulkerBoxScreenHandler;
-import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Direction;
 
-import static net.shulker.dupe.SharedVariables.*;
+import static net.shulker.dupe.SharedVariables.shouldDupe;
+import static net.shulker.dupe.SharedVariables.shouldDupeAll;
 import static net.shulker.dupe.Util.CLIENT;
 import static net.shulker.dupe.Util.log;
 
