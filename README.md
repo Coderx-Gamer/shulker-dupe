@@ -1,8 +1,19 @@
-# shulker-dupe
+# Shulker Dupe
 A client-side fabric mod that makes it easier to perform the shulker dupe.
 
 ---
-# Notes
+# Mod Info:
+
+---
+
+Mod Loader: FabricMC
+
+Versions (Separately In Releases): 1.17 - 1.19
+
+Current Version: 1.19
+
+---
+# Notes:
 
 ---
 
