@@ -1,5 +1,5 @@
 # Shulker Dupe
-A client-side fabric mod that makes it easier to perform the shulker dupe.
+A client-side mod that makes it easier to perform the shulker dupe.
 
 ---
 # Mod Info:
@@ -7,6 +7,8 @@ A client-side fabric mod that makes it easier to perform the shulker dupe.
 ---
 
 Mod Loader: FabricMC
+
+Server/Client Side: Client-Side, Should not be installed locally on a server.
 
 Versions (Separately In Releases): 1.17 - 1.19
 
