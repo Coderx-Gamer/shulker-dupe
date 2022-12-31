@@ -6,11 +6,13 @@
   "name": "Shulker Dupe",
   "description": "A mod that makes it easier to perform the shulker dupe.",
   "authors": [
-    "Coderx_Gamer"
+    "Coderx_Gamer",
+    "N3rmis",
+    "crypticplank"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Coderx-Gamer/shulker-dupe/releases",
+    "sources": "https://github.com/Coderx-Gamer/shulker-dupe"
   },
 
   "license": "CC0-1.0",
@@ -27,9 +29,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "1.19.x",
     "java": ">=16"
   },
   "suggests": {
